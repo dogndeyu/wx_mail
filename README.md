@@ -1,2 +1,3 @@
-# wx_mail
-微信商城
+####### vux vuex 几个商城页面
+npm install
+npm run dev
