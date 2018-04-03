@@ -1,0 +1,48 @@
+.Header {
+  position: fixed!important;
+  top: 0!important;
+  z-index: 666!important;
+  left: 0!important
+}
+
+.bgcolor {
+  background-color: #e32c35 !important;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.height100 {
+  height: 100%;
+}
+
+.bgcolorfff {
+  background-color: #fff !important;
+}
+.bgcolorf7f7f7 {
+  background-color: #f7f7f7 !important;
+}
+.bgcolore0e0e0 {
+  background-color: #e0e0e0 !important;
+}
+
+.poRelative {
+  position: relative !important;
+}
+
+.poAbsolute {
+  position: absolute !important;
+}
+
+.marginTop10 {
+  margin-top: 10px;
+}
+
+.marginBot10 {
+  margin-top: 10px;
+}
+
+.marginTop46 {
+  margin-top: 46px!important;
+}
