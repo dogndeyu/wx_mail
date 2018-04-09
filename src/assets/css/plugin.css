@@ -5,6 +5,20 @@
 .weui-tab__panel {
   padding-bottom: 0 !important;
 }
-.weui-cells{
-    margin-top:0!important;
- }
+
+.weui-cells {
+  margin-top: 0 !important;
+}
+
+.vux-header .vux-header-left .left-arrow:before{
+  content: "";
+  position: absolute;
+  width: 14px!important;
+  height: 14px!important;
+  border-color: #fff!important;
+  border-width: 1px 0 0 1px;
+  -webkit-transform: rotate(315deg);
+  transform: rotate(315deg);
+  top: 8px;
+  left: 7px;
+}

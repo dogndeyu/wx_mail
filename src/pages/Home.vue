@@ -4,6 +4,7 @@
       <x-header :left-options="{showBack: false}"  class="bgcolor clearfix width100 Header">{{$route.name}}</x-header>
        <view-box class="width100 height100 clearfix">
          <div class="clearfix marginTop46">
+           <!-- <input type="text" v-focus> -->
             <group  gutter="0"  class="">
                 <cell @click.native="goScoreList" is-link>
                   <img slot="icon" src="../assets/img/gyzqlogo.png" style="margin-top:2px" width="45px">
@@ -89,6 +90,8 @@
 
 <script>
 import { ViewBox, XHeader, Grid, GridItem, Group, GroupTitle, Cell } from "vux";
+import global from "../../src/Global";
+import { yUrl, hqUrl, dzimg, version, quDao ,getOpenId} from "./../data";
 let ways = [
   {
     names: "10M电信流量",
@@ -142,7 +145,8 @@ let ways = [
 export default {
   data() {
     return {
-      items: ways
+      items: ways,
+      getColor: global.colorListLength
     };
   },
   components: {
@@ -154,7 +158,14 @@ export default {
     Grid,
     GridItem
   },
-  created: function() {},
+  created() {
+    console.log(this); // 4.555806215962888
+    getOpenId()
+    this.$http
+      .all([this.ajax1(), this.ajax2()])
+      .then(this.$http.spread(function(res1, res2) {}));
+    // this.getLocalTime();
+  },
   computed: {
     limitTo: function() {
       return this.items.slice(0, 6);
@@ -193,6 +204,27 @@ export default {
       this.$router.push({
         path: "SignIn"
       });
+    },
+    ajax1() {
+      // var data_ = [];
+      // data_.push(["1", "p_60000_wx_Sign_Select"]);
+      // data_.push(["p_ip", "", "C", 20]);
+      // data_.push(["p_ipzh", "", "C", 100]);
+      // data_.push(["p_mac", "", "C", 50]);
+      // data_.push(["p_userid", "", "C", 15]);
+      // data_.push(["p_ver", version, "C", 15]);
+      // data_.push(["p_qd", quDao, "C", 1]);
+      // data_.push(["p_guid", OpenIdInform.guid, "C", 64]);
+      // data_.push(["p_stime", fwqTime_, "C", 10]);
+
+      return this.$http.get(
+        "https://www.easy-mock.com/mock/5abda425597f2f6d4d73af2c/testLirsts/testOne"
+      );
+    },
+    ajax2() {
+      return this.$http.get(
+        "https://www.easy-mock.com/mock/5abda425597f2f6d4d73af2c/testLirsts/testUrl"
+      );
     }
   }
 };

@@ -4,10 +4,10 @@
     <view-box class="width100 height100 clearfix">
          <div class="clearfix marginTop46">
              <p class="scoreList_p clearfix">
-                <span class="clearfix">
+                <span class="clearfix"  @click="showTips">
                      积分规则
                 </span>
-                 <span class="clearfix"> 
+                 <span class="clearfix" @click="showTips"> 
                      <img width="20" src="/static/306wenhao.svg" alt="">
                  </span>
              </p>
@@ -90,15 +90,21 @@
 </template>
 
 <script>
-import { ViewBox, XHeader, Divider, Group, Cell } from "vux";
-
+import { ViewBox, XHeader, Divider, Group, Cell, Alert } from "vux";
 export default {
   components: {
     ViewBox,
     XHeader,
     Divider,
     Group,
-    Cell
+    Cell,
+    Alert
+  },
+  methods: {
+    showTips() {
+      console.log(123);
+      this.msgbox("积分规则","哈哈")
+    }
   }
 };
 </script>
