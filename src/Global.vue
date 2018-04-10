@@ -21,15 +21,7 @@ const colorList = [
   "#FF2D2D",
   "#ADADAD"
 ];
-//测试地址
-// const yUrl = 'http://60.173.222.38:8211/web?';
-// const hqUrl = "http://60.173.222.46/hq?action="
-// const dzimg = "http://60.173.222.38:8211/pic/";
 
-//正式 生产地址
-const yUrl = "http://wx.gyzq.com.cn/web?";
-const hqUrl = "http://wx.gyzq.com.cn/hq?action=";
-const dzimg = "http://wx.gyzq.com.cn/pic/";
 
 const colorListLength = 20;
 const version = "1.0.0";
