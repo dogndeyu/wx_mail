@@ -2,15 +2,7 @@
 export function cube(x) {
   return x * x * x;
 }
-//测试地址
-// const yUrl = 'http://60.173.222.38:8211/web?';
-// const hqUrl = "http://60.173.222.46/hq?action="
-// const dzimg = "http://60.173.222.38:8211/pic/";
 
-//正式 生产地址
-const yUrl = "http://wx.gyzq.com.cn/web?";
-const hqUrl = "http://wx.gyzq.com.cn/hq?action=";
-const dzimg = "http://wx.gyzq.com.cn/pic/";
 
 const colorListLength = 20;
 const version = "1.0.0";
@@ -42,47 +34,7 @@ export function getOpenId() {
       console.log(res)
     })
     
-  // jQuery.support.cors = true;
-  // $.ajax({
-  //   type: "get",
-  //   url: yUrl + "action=DB_000001&type=wxInfo_Select&param=" + Bt_encrypt(supc_nc),
-  //   async: false,
-  //   cache: false,
-  //   timeout: 20000, //超时时间：20秒
-  //   dataType: "json",
-  //   jsonp: "callbackparam",
-  //   jsonpCallback: "success_jsonpCallback",
-  //   beforeSend: function (xmlHttpRequest) {},
-  //   success: function (data, textStatus) {
-  //     // data.errormsg[0].msg == 'openid未邦定.' 
-  //     if (data.errorcode != '0') {
-  //       insertInformation();
-  //     } else {
-  //       OpenIdInform = data.errormsg.root0[0];
 
-  //       if (OpenIdInform.sex == undefined || OpenIdInform.sex == "undefined" || OpenIdInform.sex == "" || OpenIdInform.sex == " " || OpenIdInform.sex == null) {
-  //         sendSex();
-  //         OpenIdInform.headimg = sex_wx;
-  //       }
-
-  //       if (OpenIdInform.headimg == undefined || OpenIdInform.headimg == "undefined" || OpenIdInform.headimg == "" || OpenIdInform.headimg == " " || OpenIdInform.headimg == null) {
-  //         sendHeadImg();
-  //         OpenIdInform.headimg = headImg_wx;
-  //       }
-
-  //       if (OpenIdInform.nickname == undefined || OpenIdInform.nickname == "undefined" || OpenIdInform.nickname == "" || OpenIdInform.nickname == " " || OpenIdInform.nickname == null) {
-  //         sendNickname();
-  //         OpenIdInform.nickname = nickName_wx;
-  //       }
-  //     }
-  //   },
-  //   complete: function (xmlHttpRequest, textStatus) {
-
-  //   },
-  //   error: function (xmlHttpRequest, textStatus, errorThrown) {
-
-  //   }
-  // });
 
 }
 export {
